@@ -1,6 +1,8 @@
 package by.epamtc.kulikOlga.task03.t02.runner;
 
 import by.epamtc.kulikOlga.task03.t02.logic.*;
+import by.epamtc.kulikOlga.task03.t02.util.DescendingOrder;
+import by.epamtc.kulikOlga.task03.t02.util.SorterByMin;
 
 public class Task02 {
     public static void main(String[] args) {
