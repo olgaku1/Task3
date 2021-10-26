@@ -54,7 +54,7 @@ public class SearchingInCollection {
 
     public ArrayList<Integer> findPrimeElements(int[] array) {
         ArrayList<Integer> listOfPrime = new ArrayList<>();
-        for (int i = 0; i <= array.length; i++) {
+        for (int i = 0; i < array.length; i++) {
             if (isPrime(array[i])) {
                 listOfPrime.add(array[i]);
             }
@@ -76,7 +76,7 @@ public class SearchingInCollection {
     public ArrayList<Integer> findFibonacciInArray(int[] array) {
         ArrayList<Integer> listFoundedFibonacci = new ArrayList<>();
         int[] listFibonacci = fibonacciNumbers(array);
-        for (int i = 0; i <= listFibonacci.length; i++) {
+        for (int i = 0; i < listFibonacci.length; i++) {
             if (binarySearch(array, listFibonacci[i])) {
                 listFoundedFibonacci.add(listFibonacci[i]);
             }
@@ -89,21 +89,26 @@ public class SearchingInCollection {
         int element1;
         int element2;
         int element3;
-        for (int i = 0; i <= array.length; i++) {
+        for (int i = 0; i < array.length; i++) {
             int leftBorder = 102;
             int rightBorder = 987;
-            if (i >= leftBorder && i <= rightBorder) {
+            if (array[i] >= leftBorder && array[i] <= rightBorder) {
                 int divisorOf3Digit = 100;
                 int divisorOf2Digit = 10;
-                element1 = i / divisorOf3Digit;
-                element2 = (i % divisorOf3Digit) / divisorOf2Digit;
-                element3 = i % divisorOf2Digit;
+                element1 = array[i] / divisorOf3Digit;
+                element2 = (array[i] % divisorOf3Digit) / divisorOf2Digit;
+                element3 = array[i] % divisorOf2Digit;
+
                 if (element1 != element2 && element1 != element3 && element2 != element3) {
                     listOf3DigitWithDiffElements.add(array[i]);
                 }
             }
 
+
         }
         return listOf3DigitWithDiffElements;
     }
 }
+
+
+

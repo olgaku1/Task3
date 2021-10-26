@@ -5,6 +5,7 @@ import by.epamtc.kulikOlga.task03.t01.entity.Array;
 import by.epamtc.kulikOlga.task03.t01.logic.SearchingInCollection;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Task_01 {
 
@@ -14,10 +15,10 @@ public class Task_01 {
         Array array = new Array(sizeArray);
         DataReader dataReader = new DataReader();
 
-        array.setArray(dataReader.readArrayFromConsole(sizeArray));
+        array.setArray(dataReader.readArrayFromFile(sizeArray));
 
         SearchingInCollection search = new SearchingInCollection();
-
+        System.out.println(array.toString());
         System.out.println("Find 13 in array? " + search.binarySearch(array.getArray(), 13));
         System.out.println("Max element: " + search.findMaxElement(array.getArray()));
         System.out.println("Min element: " + search.findMinElement(array.getArray()));
@@ -40,5 +41,7 @@ public class Task_01 {
         for (int i : result2) {
             System.out.print(i + " ");
         }
+
+
     }
 }
