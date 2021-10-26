@@ -7,7 +7,7 @@ public class SortingCollection {
         array[ind2] = tmp;
     }
 
-    public static int[] bubbleSort(int[] array) {
+    public static void bubbleSort(int[] array) {
         for (int i = array.length - 1; i >= 1; i--) {
             for (int j = 0; j < i; j++) {
                 if (array[j] > array[j + 1]) {
@@ -15,10 +15,9 @@ public class SortingCollection {
                 }
             }
         }
-        return array;
     }
 
-    public static int[] selectionSort(int[] array) {
+    public static void selectionSort(int[] array) {
         for (int left = 0; left < array.length; left++) {
             int minInd = left;
             for (int i = left; i < array.length; i++) {
@@ -28,10 +27,9 @@ public class SortingCollection {
             }
             swap(array, left, minInd);
         }
-        return array;
     }
 
-    public static int[] shuttleSort(int[] array) {
+    public static void shuttleSort(int[] array) {
         for (int i = 1; i <= array.length; i++) {
             if (array[i] < array[i - 1]) {
                 swap(array, i, i - 1);
@@ -44,6 +42,5 @@ public class SortingCollection {
                 }
             }
         }
-        return array;
     }
 }

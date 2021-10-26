@@ -27,13 +27,13 @@ public class SearchingInCollection {
     }
 
     public int findMaxElement(int[] array) {
-        int[] sortedArray = SortingCollection.bubbleSort(array);
-        return sortedArray[sortedArray.length - 1];
+        SortingCollection.bubbleSort(array);
+        return array[array.length - 1];
     }
 
     public int findMinElement(int[] array) {
-        int[] sortedArray = SortingCollection.bubbleSort(array);
-        return sortedArray[0];
+        SortingCollection.bubbleSort(array);
+        return array[0];
     }
 
     public boolean isPrime(int num) {
